@@ -82,8 +82,8 @@ public class TFIDFAnalyzer
 		
 		int wordSum=0;
 		for(String segment:segments) {
-			//停用词不予考虑，单字词不予考虑
-			if(!stopWordsSet.contains(segment) && segment.length()>1) {
+			//停用词不予考虑
+			if(!stopWordsSet.contains(segment)) {
 				wordSum++;
 				if(freqMap.containsKey(segment)) {
 					freqMap.put(segment,freqMap.get(segment)+1);
